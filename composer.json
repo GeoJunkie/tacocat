@@ -1,0 +1,16 @@
+{
+    "name": "geojunkie/tacocat",
+    "description": "It reverses text. Just for fun.",
+    "type": "project",
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1"
+    },
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Mike Straw",
+            "email": "mike.straw@automattic.com"
+        }
+    ]
+}

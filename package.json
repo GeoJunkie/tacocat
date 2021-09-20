@@ -1,0 +1,38 @@
+{
+  "name": "tacocat",
+  "version": "1.0.0",
+  "description": "A plugin that is the same backwards and forwards",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-env start",
+    "stop": "wp-env stop",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "logs": "wp-env logs",
+    "logall": "wp-env logs --debug",
+    "logallw": "wp-env logs --debug --watch",
+    "logw": "wp-env logs --watch",
+    "resetall": "wp-env destroy",
+    "resetdb": "wp-env clean all",
+    "update": "wp-env start --update",
+    "wp-env": "wp-env",
+    "xdebug": "wp-env start --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoJunkie/tacocat.git"
+  },
+  "keywords": [
+    "plugin",
+    "dev",
+    "learning"
+  ],
+  "author": "Mike Straw",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/GeoJunkie/tacocat/issues"
+  },
+  "homepage": "https://github.com/GeoJunkie/tacocat#readme",
+  "devDependencies": {
+    "@wordpress/env": "^4.1.1"
+  }
+}
