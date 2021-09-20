@@ -1,11 +1,10 @@
 {
     "name": "geojunkie/tacocat",
     "description": "It reverses text. Just for fun.",
-    "type": "project",
+    "type": "wordpress-plugin",
     "require-dev": {
         "wp-coding-standards/wpcs": "^2.3",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-        "php-cs-fixer/diff": "^2.0"
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1"
     },
     "license": "GPL-2.0-or-later",
     "authors": [
