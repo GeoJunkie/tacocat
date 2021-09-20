@@ -14,6 +14,8 @@
  * Domain Path:       /assets/lang
  */
 
+ namespace Tacocat;
+
  /*
 Copyright (C) 2021 Mike Straw
 
@@ -31,3 +33,14 @@ You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
+
+define ('TACOCAT_DIR', plugin_dir_path(__FILE__));
+
+register_activation_hook( __FILE__, function () {
+    require_once TACOCAT_DIR . 'src/class-activator.php';
+    Activator::activate();
+});
+
+register_deactivation_hook( __FILE__, function(){
+    require_once TACOCAT_DIR . 'src/class-deactivator.php';
+});
