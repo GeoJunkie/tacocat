@@ -6,7 +6,7 @@ It reverses text. Just for fun.
 
 ## Development
 
-Uses the [@wordpress/env npm package](https://www.npmjs.com/package/@wordpress/env)
+Uses [@wordpress/env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/)
 
 * Checkout repo
 * `npm install`

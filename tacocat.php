@@ -5,7 +5,7 @@
  * Description:       It reverses text. Just for fun.
  * Version:           1.0.0
  * Requires at least: TBD
- * Requires PHP:      TBD
+ * Requires PHP:      5.1
  * Author:            Mike Straw
  * Author URI:        https://github.com/GeoJunkie/
  * License:           GPL v2 or later
@@ -34,18 +34,34 @@ namespace Tacocat;
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; 
+if (! defined('ABSPATH') ) {
+    exit; 
 }    
 
-define ('TACOCAT_DIR', plugin_dir_path(__FILE__));
+error_log('Made it'    );
+define('TACOCAT_DIR', plugin_dir_path(__FILE__));
 
-register_activation_hook( __FILE__, function () {
-    require_once TACOCAT_DIR . 'src/class-activator.php';
-    Activator::activate();
-});
+register_activation_hook(
+    TACOCAT_DIR, function () {
+        include_once TACOCAT_DIR . 'src/class-activator.php';
+        Activator::activate();
+    }
+);
 
-register_deactivation_hook( __FILE__, function(){
-    require_once TACOCAT_DIR . 'src/class-deactivator.php';
-});
+register_deactivation_hook(
+    __FILE__, function () {
+        include_once TACOCAT_DIR . 'src/class-deactivator.php';
+    }
+);
+
+/**
+ * Load the autoloader to bring in class files automattically
+ */
+
+require_once TACOCAT_DIR . 'src/loader.php';
+
+/**
+ * Load the plugin class.
+ */
+
+Main::start();

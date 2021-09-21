@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="Mike Straw">
+    <description>PHP coding standards for Mike Straw's plugin work.</description>
+    <config name="installed_paths" value="vendor/wp-coding-standards/wpcs/"/>
+
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+
+    <rule ref="PEAR"/>
+    <rule ref="WordPress-Core"/>
+    <rule ref="WordPress-Extra"/>
+</ruleset>

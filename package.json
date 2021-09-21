@@ -4,9 +4,11 @@
   "description": "A plugin that is the same backwards and forwards",
   "main": "index.js",
   "scripts": {
+    "cli": "wp-env run cli",
     "start": "wp-env start",
     "stop": "wp-env stop",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lintall": "diff=$(git diff --name-only --diff-filter=ACM trunk | grep .php$ | sed 's/ *$//g') && if (test -n \"$diff\"); then ./vendor/bin/phpcs --standard=phpcs.xml $diff; fi",
     "logs": "wp-env logs",
     "logall": "wp-env logs --debug",
     "logallw": "wp-env logs --debug --watch",
